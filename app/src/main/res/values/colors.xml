@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_green">#10B981</color>
+    <color name="primary_green_light">#F0FDFA</color>
+    <color name="dark_navy">#111827</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="text_primary">#111827</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="bg_light">#F9FAFB</color>
+    <color name="border_color">#E5E7EB</color>
+
+    <color name="status_pending">#F59E0B</color> <!-- Amber -->
+    <color name="status_in_progress">#3B82F6</color> <!-- Blue -->
+    <color name="status_resolved">#10B981</color> <!-- Green -->
+
+    <color name="edit_blue">#2196F3</color>
+    <color name="delete_red">#F44336</color>
+    <color name="primary_green_alpha">#2610B981</color> <!-- 15% opacity -->
+</resources>

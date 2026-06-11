@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">ReportaCidade</string>
+    <string name="edit">Editar</string>
+    <string name="delete">Excluir</string>
+    <string name="update">Atualizar</string>
+    <string name="edit_report">Editar Relato</string>
+    <string name="new_report">Nova Denúncia</string>
+    <string name="delete_report_confirm_title">Excluir Relato</string>
+    <string name="delete_report_confirm_message">Tem certeza que deseja excluir este relato?</string>
+    <string name="report_deleted_success">Relato excluído com sucesso</string>
+    <string name="cancel">Cancelar</string>
+    <string name="send_report">Enviar Denúncia</string>
+    <string name="save">Salvar</string>
+
+    <!-- Bottom Nav -->
+    <string name="nav_relatos">Relatos</string>
+    <string name="nav_mapa">Mapa</string>
+    <string name="nav_meus_relatos">Meus Relatos</string>
+    <string name="nav_perfil">Perfil</string>
+    <string name="nav_notificacoes">Notificações</string>
+
+    <!-- Profile -->
+    <string name="profile_name_placeholder">Nome do Usuário</string>
+    <string name="profile_email_placeholder">email@exemplo.com</string>
+    <string name="profile_city_label">Cidade</string>
+    <string name="profile_neighborhood_label">Bairro</string>
+    <string name="profile_edit_title">Editar Perfil</string>
+    <string name="logout">Sair da Conta</string>
+
+    <string name="status_verificando">Verificando</string>
+    <string name="status_pendente">Pendente</string>
+    <string name="status_resolvido">Resolvido</string>
+
+    <!-- Titles -->
+    <string name="title_nearby_reports">Relatos Próximos</string>
+    <string name="title_my_reports">Meus Relatos</string>
+    <string name="loading">Carregando...</string>
+    <string name="title_notifications">Notificações</string>
+    <string name="label_report">DENÚNCIA</string>
+    <string name="label_update">ATUALIZAÇÃO</string>
+    <string name="notification_status_title">Status Atualizado</string>
+    <string name="notification_like_title">Nova Curtida</string>
+    <string name="notification_status_changed_msg">O status do seu relato foi alterado para: %1$s</string>
+    <string name="notification_like_received_msg">Seu relato recebeu uma nova curtida!</string>
+    <string name="empty_notifications">Você não tem notificações no momento.</string>
+
+    <!-- About App -->
+    <string name="about_app_title">Sobre o ReportaCidade</string>
+    <string name="about_app_content">O ReportaCidade é uma plataforma comunitária que permite aos cidadãos reportar problemas urbanos diretamente às autoridades e acompanhar a resolução em tempo real.\n\nEsta é uma versão ALPHA do aplicativo, desenvolvida para testes e validação de funcionalidades. Algumas funções podem estar em desenvolvimento.</string>
+    <string name="profile_resolved_reports">Relatos Resolvidos</string>
+    <string name="profile_about_app">Sobre o App</string>
+    <string name="title_resolved_reports">Relatos Resolvidos</string>
+</resources>

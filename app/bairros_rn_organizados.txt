@@ -1,0 +1,209 @@
+======================================================================
+     LISTA DE BAIRROS DAS PRINCIPAIS CIDADES DO RIO GRANDE DO NORTE
+======================================================================
+
+----------------------------------------------------------------------
+1. NATAL (Capital)
+----------------------------------------------------------------------
+Zona Sul:
+  - Candelária
+  - Capim Macio
+  - Lagoa Nova
+  - Neópolis
+  - Nova Descoberta
+  - Pitimbu
+  - Ponta Negra
+
+Zona Leste:
+  - Alecrim
+  - Areia Preta
+  - Barro Vermelho
+  - Cidade Alta
+  - Lagoa Seca
+  - Mãe Luíza
+  - Petrópolis
+  - Praia do Meio
+  - Ribeira
+  - Rocas
+  - Santos Reis
+  - Tirol
+
+Zona Norte:
+  - Igapó
+  - Lagoa Azul
+  - Nossa Senhora da Apresentação
+  - Pajuçara
+  - Potengi
+  - Redinha
+  - Salinas
+
+Zona Oeste:
+  - Bom Pastor
+  - Cidade da Esperança
+  - Cidade Nova
+  - Dix-Sept Rosado
+  - Felipe Camarão
+  - Guarapes
+  - Nordeste
+  - Nossa Senhora de Nazaré
+  - Planalto
+  - Quintas
+
+----------------------------------------------------------------------
+2. MOSSORÓ
+----------------------------------------------------------------------
+Zona Central:
+  - Centro
+  - Doze Anos
+  - Paredões
+  - Bom Jardim
+
+Zona Norte:
+  - Santo Antônio
+  - Barrocas
+  - Bom Pastor
+  - Santa Helena
+  - Estrada da Raiz
+  - Independência
+  - Santa Júlia
+  - José Agripino
+
+Zona Leste:
+  - Alto de São Manoel
+  - Ilha de Santa Luzia
+  - Planalto 13 de Maio
+  - Dom Jaime Câmara
+  - Costa e Silva
+  - Pintos
+  - Rincão
+  - Sumaré
+  - Vingt Rosado
+  - Liberdade I e II
+  - Alameda dos Cajueiros
+  - Walfredo Gurgel
+  - Teimosos
+  - Cohab
+  - Ulrick Graff
+
+Zona Oeste:
+  - Abolição (I, II, III, IV e V)
+  - Nova Betânia
+  - Aeroporto (I e II)
+  - Santa Delmira
+  - Redenção
+  - Nova Mossoró
+  - Três Vinténs
+  - Monsenhor Américo
+  - Bela Vista
+
+Zona Sul:
+  - Belo Horizonte
+  - Boa Vista
+  - Dix-Sept Rosado
+  - Lagoa do Mato
+  - Alagados
+  - Itapetinga
+  - Carnaubal
+
+----------------------------------------------------------------------
+3. PARNAMIRIM
+----------------------------------------------------------------------
+  - Bela Parnamirim
+  - Boa Esperança
+  - Cajupiranga
+  - Centro
+  - Cohabinal
+  - Emaús
+  - Encanto Verde
+  - Jardim Planalto
+  - Liberdade
+  - Monte Castelo
+  - Nova Esperança
+  - Nova Parnamirim
+  - Parque das Árvores
+  - Parque das Nações
+  - Parque de Exposições
+  - Parque do Jiqui
+  - Passagem de Areia
+  - Rosa dos Ventos
+  - Santa Tereza
+  - Santos Reis
+  - Vale do Sol
+  - Vida Nova
+  - Cotovelo (Litoral)
+  - Pirangi do Norte (Litoral)
+  - Pium (Litoral)
+
+----------------------------------------------------------------------
+4. CAICÓ
+----------------------------------------------------------------------
+Zona Central:
+  - Centro
+  - Acampamento
+  - Penedo
+
+Zona Leste:
+  - Nova Descoberta
+  - Castelo Branco
+  - Canuto e Filhos
+  - Vila Altiva
+  - Jardim Satélite
+  - Loteamento Vila do Príncipe
+  - Loteamento Seridó
+  - Loteamento Cidade Alta
+
+Zona Norte:
+  - Boa Passagem
+  - Vila do Príncipe
+  - Recreio
+  - Darci Fonseca
+  - Alto da Boa Vista
+  - Loteamento Gabriel Diniz
+  - Loteamento Stella Maris
+
+Zona Oeste:
+  - Barra Nova
+  - Batalhão
+  - Paulo VI
+  - João XXIII
+  - Walfredo Gurgel
+  - Adjunto Dias
+  - Frei Damião
+  - Casas Populares
+  - Novo Horizonte
+
+Zona Sul:
+  - Paraíba
+  - Soledade
+
+----------------------------------------------------------------------
+5. SÃO GONÇALO DO AMARANTE
+----------------------------------------------------------------------
+  - Centro
+  - Amarante
+  - Jardim Lola
+  - Santo Antônio do Potengi
+  - Golandim
+  - Regomoleiro
+  - Guanduba
+  - Novo Amarante
+  - Serrinha
+  - Ouro Verde
+  - Barreiros
+  - Santa Terezinha
+
+----------------------------------------------------------------------
+6. MACAÍBA
+----------------------------------------------------------------------
+  - Centro
+  - Auta de Souza
+  - Campo das Mangueiras
+  - Ferrareis
+  - Vila Elã
+  - Aliança
+  - Morada da Fé
+  - Baixa Verde
+
+======================================================================
+FIM DA LISTA
+======================================================================

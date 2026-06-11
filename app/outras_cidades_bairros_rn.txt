@@ -1,0 +1,77 @@
+======================================================================
+         LISTA DE BAIRROS DE OUTRAS CIDADES DO RIO GRANDE DO NORTE
+======================================================================
+(Cidades complementares que não estavam no primeiro arquivo)
+
+----------------------------------------------------------------------
+1. ASSU
+----------------------------------------------------------------------
+  - Centro
+  - Alto do Rosário
+  - Bela Vista
+  - Dom Elizeu
+  - Frutilândia
+  - Novo Horizonte
+  - Quinta do Farol
+  - Vertentes
+
+----------------------------------------------------------------------
+2. CEARÁ-MIRIM
+----------------------------------------------------------------------
+  - Centro
+  - Brogodó
+  - Coqueiros
+  - Nova Descoberta
+  - Passagem de Areia
+  - Planalto
+  - Santa Águeda
+
+----------------------------------------------------------------------
+3. CURRAIS NOVOS
+----------------------------------------------------------------------
+  - Centro
+  - Dr. José Bezerra
+  - Gilberto Pinheiro
+  - JK
+  - Paizinho Maria
+  - Parque das Nações
+  - Promorar
+  - Radir Azul
+  - Santa Maria
+
+----------------------------------------------------------------------
+4. NOVA CRUZ
+----------------------------------------------------------------------
+  - Centro
+  - Alto de Santa Luzia
+  - Coréia
+  - Frei Damião
+  - Pascoal
+  - Salgado
+  - São Sebastião
+
+----------------------------------------------------------------------
+5. PAU DOS FERROS
+----------------------------------------------------------------------
+  - Centro
+  - Carvão
+  - João XXIII
+  - Manoel Domingos
+  - Paraíba
+  - Princesa do Oeste
+  - Riacho do Meio
+  - São Benedito
+
+----------------------------------------------------------------------
+6. SANTA CRUZ
+----------------------------------------------------------------------
+  - Centro
+  - Conjunto Alonço Bezerra
+  - Conjunto Cônego Monte
+  - DNER
+  - Maracujá
+  - Paraíso
+
+======================================================================
+FIM DA LISTA COMPLEMENTAR
+======================================================================

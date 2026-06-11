@@ -1,0 +1,46 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Scaled version of ic_app_logo for the app icon safe zone -->
+    <group
+        android:translateX="4"
+        android:translateY="4"
+        android:scaleX="0.83"
+        android:scaleY="0.83">
+
+        <!-- Map Base -->
+        <path
+            android:fillColor="#10B981"
+            android:pathData="M20,55 L40,45 V85 L20,95 Z" />
+        <path
+            android:fillColor="#059669"
+            android:pathData="M40,45 L60,55 V95 L40,85 Z" />
+        <path
+            android:fillColor="#10B981"
+            android:pathData="M60,55 L80,45 V85 L60,95 Z" />
+
+        <!-- Pin -->
+        <path
+            android:fillColor="#EF4444"
+            android:pathData="M50,15c-5.5,0 -10,4.5 -10,10c0,7.5 10,17.5 10,17.5s10,-10 10,-17.5c0,-5.5 -4.5,-10 -10,-10zM50,29c-2.2,0 -4,-1.8 -4,-4s1.8,-4 4,-4s4,1.8 4,4s-1.8,4 -4,4z" />
+
+        <!-- Speaker -->
+        <path
+            android:fillColor="#111827"
+            android:pathData="M92,55 L102,45 V85 L92,75 H85 V55 H92 Z" />
+        <path
+            android:strokeColor="#111827"
+            android:strokeWidth="3"
+            android:strokeLineCap="round"
+            android:pathData="M108,57c2,3 2,13 0,16" />
+        <path
+            android:strokeColor="#111827"
+            android:strokeWidth="3"
+            android:strokeLineCap="round"
+            android:pathData="M115,50c4,5 4,25 0,30" />
+    </group>
+
+</vector>
