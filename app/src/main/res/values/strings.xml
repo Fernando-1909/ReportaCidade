@@ -27,7 +27,10 @@
     <string name="profile_edit_title">Editar Perfil</string>
     <string name="logout">Sair da Conta</string>
 
-    <string name="status_verificando">Verificando</string>
+    <string name="status_analise">Em Análise</string>
+    <string name="description_label">Descrição</string>
+    <string name="address_label">Endereço</string>
+    <string name="admin_status_title">Gerenciar Status (Admin)</string>
     <string name="status_pendente">Pendente</string>
     <string name="status_resolvido">Resolvido</string>
 
@@ -46,8 +49,13 @@
 
     <!-- About App -->
     <string name="about_app_title">Sobre o ReportaCidade</string>
-    <string name="about_app_content">O ReportaCidade é uma plataforma comunitária que permite aos cidadãos reportar problemas urbanos diretamente às autoridades e acompanhar a resolução em tempo real.\n\nEsta é uma versão ALPHA do aplicativo, desenvolvida para testes e validação de funcionalidades. Algumas funções podem estar em desenvolvimento.</string>
+    <string name="about_app_content">O ReportaCidade é uma plataforma comunitária que permite aos cidadãos reportar problemas urbanos diretamente às autoridades e acompanhar a resolução em tempo real.\n\nDesenvolvido por: José Inácio e Fernando Macedo.\n\nEste é um projeto desenvolvido para a disciplina de Dispositivos Móveis do curso de Ciência da Computação da UERN - Campus Natal.\n\nEsta é uma <b>versão ALPHA</b>, ainda em desenvolvimento, mas já contando com as principais funções.</string>
+    <string name="anonymous_report">Denúncia Anônima</string>
+    <string name="anonymous_user">Usuário Anônimo</string>
+    <string name="anonymous_report_hint">Seu nome não será exibido publicamente.</string>
     <string name="profile_resolved_reports">Relatos Resolvidos</string>
     <string name="profile_about_app">Sobre o App</string>
     <string name="title_resolved_reports">Relatos Resolvidos</string>
+    <string name="app_version">Versão 1.0.0 (Alpha)</string>
+    <string name="close">Fechar</string>
 </resources>

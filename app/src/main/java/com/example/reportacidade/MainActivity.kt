@@ -48,6 +48,7 @@ import com.google.android.material.button.MaterialButtonToggleGroup
 import com.google.android.material.chip.Chip
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.materialswitch.MaterialSwitch
 import com.google.android.material.textfield.MaterialAutoCompleteTextView
 import com.google.android.material.textfield.TextInputEditText
 import kotlinx.coroutines.Job
@@ -87,6 +88,7 @@ class MainActivity : AppCompatActivity() {
     // Variáveis para gerenciar a seleção de imagem no diálogo
     private var currentDialogImageView: ImageView? = null
     private var selectedImageUri: Uri? = null
+    private var photoFile: File? = null
     
     private var reportLat: Double = 0.0
     private var reportLng: Double = 0.0
@@ -120,6 +122,51 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Erro ao processar imagem", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    private val takePhotoLauncher = registerForActivityResult(ActivityResultContracts.TakePicture()) { success ->
+        if (success) {
+            photoFile?.let { file ->
+                val uri = Uri.fromFile(file)
+                // Salva na memória interna para consistência (e redimensionamento)
+                val savedPath = saveImageToInternalStorage(uri)
+                if (savedPath != null) {
+                    selectedImageUri = Uri.fromFile(File(savedPath))
+                    currentDialogImageView?.let { iv ->
+                        iv.setImageURI(selectedImageUri)
+                        iv.scaleType = ImageView.ScaleType.CENTER_CROP
+                    }
+                }
+            }
+        }
+    }
+
+    private val requestCameraPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { isGranted: Boolean ->
+        if (isGranted) {
+            launchCamera()
+        } else {
+            Toast.makeText(this, "Permissão da câmera negada", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun launchCamera() {
+        photoFile = createImageFile()
+        photoFile?.let {
+            val photoURI = androidx.core.content.FileProvider.getUriForFile(
+                this,
+                "${packageName}.fileprovider",
+                it
+            )
+            takePhotoLauncher.launch(photoURI)
+        }
+    }
+
+    private fun createImageFile(): File? {
+        val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
+        val storageDir = getExternalFilesDir(android.os.Environment.DIRECTORY_PICTURES)
+        return File.createTempFile("JPEG_${timeStamp}_", ".jpg", storageDir)
     }
 
     private fun saveImageToInternalStorage(uri: Uri): String? {
@@ -374,11 +421,15 @@ class MainActivity : AppCompatActivity() {
 
         btnAboutApp.setOnClickListener {
             val themedContext = ContextThemeWrapper(this, R.style.Theme_ReportaCidade)
-            MaterialAlertDialogBuilder(themedContext)
-                .setTitle(R.string.about_app_title)
-                .setMessage(R.string.about_app_content)
-                .setPositiveButton("OK", null)
-                .show()
+            val dialogView = LayoutInflater.from(themedContext).inflate(R.layout.dialog_about_app, null)
+            val btnOk = dialogView.findViewById<Button>(R.id.btnOk)
+
+            val dialog = MaterialAlertDialogBuilder(themedContext)
+                .setView(dialogView)
+                .create()
+
+            btnOk.setOnClickListener { dialog.dismiss() }
+            dialog.show()
         }
 
         btnMarkAllRead.setOnClickListener {
@@ -648,7 +699,11 @@ class MainActivity : AppCompatActivity() {
         val sdf = SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault())
         tvDate.text = sdf.format(Date(report.createdAt))
 
-        tvUser.text = "Enviado por: ${report.userName}"
+        tvUser.text = if (report.isAnonymous) {
+            "Enviado por: ${getString(R.string.anonymous_user)}"
+        } else {
+            "Enviado por: ${report.userName}"
+        }
         tvDescription.text = report.description
         tvAddress.text = report.address
         
@@ -746,6 +801,7 @@ class MainActivity : AppCompatActivity() {
         val btnGallery = dialogView.findViewById<Button>(R.id.buttonGallery)
         val btnSave = dialogView.findViewById<Button>(R.id.buttonSave)
         val btnGetLocation = dialogView.findViewById<Button>(R.id.buttonGetLocation)
+        val switchAnonymous = dialogView.findViewById<MaterialSwitch>(R.id.switchAnonymous)
 
         currentAddressField = editAddress
         reportLat = existingReport?.latitude ?: 0.0
@@ -770,6 +826,7 @@ class MainActivity : AppCompatActivity() {
         val adapter = ArrayAdapter(themedContext, android.R.layout.simple_dropdown_item_1line, categories)
         autoCompleteCategory.setAdapter(adapter)
         autoCompleteCategory.setText(selectedCat.displayName, false)
+        switchAnonymous.isChecked = existingReport?.isAnonymous ?: false
         
         autoCompleteCategory.setOnItemClickListener { _, _, position, _ ->
             selectedCat = ReportCategory.entries[position]
@@ -785,10 +842,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnCamera.setOnClickListener {
-            // Simulação de câmera
-            selectedImageUri = Uri.parse("android.resource://$packageName/${R.drawable.ic_app_logo}")
-            ivPreview.setImageURI(selectedImageUri)
-            ivPreview.scaleType = ImageView.ScaleType.CENTER_CROP
+            if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA) 
+                == android.content.pm.PackageManager.PERMISSION_GRANTED) {
+                launchCamera()
+            } else {
+                requestCameraPermissionLauncher.launch(android.Manifest.permission.CAMERA)
+            }
         }
 
         btnGallery.setOnClickListener {
@@ -815,7 +874,8 @@ class MainActivity : AppCompatActivity() {
                     category = selectedCat,
                     latitude = reportLat,
                     longitude = reportLng,
-                    imageUrls = if (selectedImageUri != null) listOf(selectedImageUri.toString()) else emptyList()
+                    imageUrls = if (selectedImageUri != null) listOf(selectedImageUri.toString()) else emptyList(),
+                    isAnonymous = switchAnonymous.isChecked
                 ) ?: Report(
                     userId = currentUser.id,
                     userName = currentUser.name,
@@ -825,7 +885,8 @@ class MainActivity : AppCompatActivity() {
                     latitude = reportLat,
                     longitude = reportLng,
                     imageUrls = if (selectedImageUri != null) listOf(selectedImageUri.toString()) else emptyList(),
-                    createdAt = System.currentTimeMillis()
+                    createdAt = System.currentTimeMillis(),
+                    isAnonymous = switchAnonymous.isChecked
                 )
 
                 if (existingReport == null) {

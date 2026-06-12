@@ -87,9 +87,9 @@
             android:layout_marginBottom="12dp"
             android:text="Usar Localização Atual"
             app:icon="@android:drawable/ic_menu_mylocation"
-            app:iconTint="@color/primary_green"
-            android:textColor="@color/primary_green"
-            app:backgroundTint="@color/primary_green_alpha"
+            app:iconTint="?attr/colorPrimary"
+            android:textColor="?attr/colorPrimary"
+            app:backgroundTint="?attr/colorPrimaryContainer"
             app:strokeWidth="0dp" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -105,6 +105,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Rua, número, bairro..."
+                android:textColor="?attr/colorOnSurface"
                 android:inputType="textPostalAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -123,14 +124,15 @@
             app:cardCornerRadius="12dp"
             app:cardElevation="0dp"
             app:strokeWidth="1dp"
-            app:strokeColor="@color/border_color">
+            app:strokeColor="?attr/colorOutlineVariant">
 
             <ImageView
                 android:id="@+id/imageViewSelected"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerInside"
-                android:src="@android:drawable/ic_menu_camera" />
+                android:src="@android:drawable/ic_menu_camera"
+                app:tint="?attr/colorOnSurfaceVariant" />
 
         </com.google.android.material.card.MaterialCardView>
 
@@ -149,8 +151,8 @@
                 android:layout_marginEnd="8dp"
                 android:text="Câmera"
                 app:icon="@android:drawable/ic_menu_camera"
-                app:iconTint="@color/primary_green"
-                android:textColor="@color/primary_green" />
+                app:iconTint="?attr/colorPrimary"
+                android:textColor="?attr/colorPrimary" />
 
             <Button
                 android:id="@+id/buttonGallery"
@@ -160,18 +162,25 @@
                 android:layout_weight="1"
                 android:text="Galeria"
                 app:icon="@android:drawable/ic_menu_gallery"
-                app:iconTint="@color/primary_green"
-                android:textColor="@color/primary_green" />
+                app:iconTint="?attr/colorPrimary"
+                android:textColor="?attr/colorPrimary" />
         </LinearLayout>
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchAnonymous"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="@string/anonymous_report"
+            android:textColor="?attr/colorOnSurface"
+            app:thumbIconTint="?attr/colorPrimary" />
 
         <Button
             android:id="@+id/buttonSave"
             style="@style/Widget.App.Button.Primary"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            app:backgroundTint="@color/primary_green"
-            android:textColor="@color/white"
-            android:text="Enviar Denúncia" />
+            android:text="@string/send_report" />
 
     </LinearLayout>
 </ScrollView>

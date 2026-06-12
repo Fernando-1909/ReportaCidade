@@ -69,7 +69,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Descrição"
+            android:text="@string/description_label"
+            android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+            android:textColor="?attr/colorOnSurface"
             android:textStyle="bold"
             android:layout_marginBottom="4dp"/>
 
@@ -78,12 +80,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            android:textColor="?attr/colorOnSurfaceVariant"
             android:layout_marginBottom="16dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Endereço"
+            android:text="@string/address_label"
+            android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+            android:textColor="?attr/colorOnSurface"
             android:textStyle="bold"
             android:layout_marginBottom="4dp"/>
 
@@ -92,6 +97,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+            android:textColor="?attr/colorOnSurfaceVariant"
             android:layout_marginBottom="24dp" />
 
         <!-- Seção exclusiva para Admin -->
@@ -99,7 +105,9 @@
             android:id="@+id/labelStatus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Gerenciar Status (Admin)"
+            android:text="@string/admin_status_title"
+            android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+            android:textColor="?attr/colorOnSurface"
             android:textStyle="bold"
             android:layout_marginBottom="8dp"
             android:visibility="gone"/>
@@ -119,8 +127,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Pendente"
-                android:textSize="10sp" />
+                android:text="@string/status_pendente"
+                android:textSize="11sp" />
 
             <Button
                 android:id="@+id/btnAnalise"
@@ -128,8 +136,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Verificando"
-                android:textSize="10sp" />
+                android:text="@string/status_analise"
+                android:textSize="11sp" />
 
             <Button
                 android:id="@+id/btnResolvido"
@@ -137,8 +145,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Resolvido"
-                android:textSize="10sp" />
+                android:text="@string/status_resolvido"
+                android:textSize="11sp" />
 
         </com.google.android.material.button.MaterialButtonToggleGroup>
 
@@ -181,11 +189,12 @@
 
         <Button
             android:id="@+id/btnCloseDetail"
+            style="@style/Widget.Material3.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Fechar"
+            android:text="@string/close"
             android:textAllCaps="true"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
     </LinearLayout>

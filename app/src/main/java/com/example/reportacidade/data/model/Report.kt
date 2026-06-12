@@ -13,5 +13,6 @@ data class Report(
     val status: ReportStatus = ReportStatus.PENDENTE,
     val createdAt: Long = System.currentTimeMillis(),
     val likedBy: List<String> = emptyList(),
-    val likeCount: Int = 0
+    val likeCount: Int = 0,
+    val isAnonymous: Boolean = false
 )
